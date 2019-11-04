@@ -8,5 +8,6 @@ namespace GreenProgrammerz.Model.Model
 {
     public class Category
     {
+
     }
 }
