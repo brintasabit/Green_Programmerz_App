@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.852
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GreenProgrammerz", "GreenProgrammerz\GreenProgrammerz.csproj", "{3292D9A2-6A82-4FC9-80C3-3BADD7E38278}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GreenProgrammerz.Bll", "GreenProgrammerz.Bll\GreenProgrammerz.Bll.csproj", "{AAB4CA79-C554-4C25-AAC1-3230A5ABA034}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GreenProgrammerz.Repository", "GreenProgrammerz.Repository\GreenProgrammerz.Repository.csproj", "{5FE9C60B-2866-4075-BA67-BF6938C00F7E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GreenProgrammerz.Model", "GreenProgrammerz.Model\GreenProgrammerz.Model.csproj", "{942DE859-3F69-4B07-9EC1-F766C22BA33C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GreenProgrammerzApp", "GreenProgrammerzApp\GreenProgrammerzApp.csproj", "{E6E6D2A9-1DF1-4460-919A-AA304D155A6B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3292D9A2-6A82-4FC9-80C3-3BADD7E38278}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3292D9A2-6A82-4FC9-80C3-3BADD7E38278}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3292D9A2-6A82-4FC9-80C3-3BADD7E38278}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3292D9A2-6A82-4FC9-80C3-3BADD7E38278}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AAB4CA79-C554-4C25-AAC1-3230A5ABA034}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAB4CA79-C554-4C25-AAC1-3230A5ABA034}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AAB4CA79-C554-4C25-AAC1-3230A5ABA034}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AAB4CA79-C554-4C25-AAC1-3230A5ABA034}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FE9C60B-2866-4075-BA67-BF6938C00F7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FE9C60B-2866-4075-BA67-BF6938C00F7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FE9C60B-2866-4075-BA67-BF6938C00F7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FE9C60B-2866-4075-BA67-BF6938C00F7E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{942DE859-3F69-4B07-9EC1-F766C22BA33C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{942DE859-3F69-4B07-9EC1-F766C22BA33C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{942DE859-3F69-4B07-9EC1-F766C22BA33C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{942DE859-3F69-4B07-9EC1-F766C22BA33C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6E6D2A9-1DF1-4460-919A-AA304D155A6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6E6D2A9-1DF1-4460-919A-AA304D155A6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6E6D2A9-1DF1-4460-919A-AA304D155A6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6E6D2A9-1DF1-4460-919A-AA304D155A6B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {652B8858-74DE-4030-AF67-60BBC4BC85BF}
+	EndGlobalSection
+EndGlobal
