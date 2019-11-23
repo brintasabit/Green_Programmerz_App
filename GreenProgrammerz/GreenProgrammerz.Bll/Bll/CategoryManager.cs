@@ -10,5 +10,6 @@ namespace GreenProgrammerz.Bll.Bll
 {
     public class CategoryManager
     {
+
     }
 }

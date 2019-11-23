@@ -5,11 +5,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5FE9C60B-2866-4075-BA67-BF6938C00F7E}</ProjectGuid>
+    <ProjectGuid>{EB3EF75F-7C68-4B2A-90CE-028A5817A465}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>GreenProgrammerz.Repository</RootNamespace>
-    <AssemblyName>GreenProgrammerz.Repository</AssemblyName>
+    <RootNamespace>GreenProgrammerz.DatabaseContext</RootNamespace>
+    <AssemblyName>GreenProgrammerz.DatabaseContext</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -51,19 +51,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DatabaseContext\ProjectDbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repository\CategoryRepository.cs" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\GreenProgrammerz.DatabaseContext\GreenProgrammerz.DatabaseContext.csproj">
-      <Project>{eb3ef75f-7c68-4b2a-90ce-028a5817a465}</Project>
-      <Name>GreenProgrammerz.DatabaseContext</Name>
-    </ProjectReference>
     <ProjectReference Include="..\GreenProgrammerz.Model\GreenProgrammerz.Model.csproj">
       <Project>{942de859-3f69-4b07-9ec1-f766c22ba33c}</Project>
       <Name>GreenProgrammerz.Model</Name>
