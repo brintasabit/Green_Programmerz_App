@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.Entity.Validation;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,17 +14,7 @@ namespace GreenProgrammerz.Repository.Repository
         ProjectDbContext dbContext=new ProjectDbContext();
         public bool SaveInfo(Supplier _supplier)
         {
-            try
-            {
-                dbContext.Suppliers.Add(_supplier);
-            
-                
-            }
-            catch (Exception exception)
-            {
-                //Console.WriteLine(e);
-                
-            }
+            dbContext.Suppliers.Add(_supplier);                       
             return dbContext.SaveChanges() > 0;
         }
     }
