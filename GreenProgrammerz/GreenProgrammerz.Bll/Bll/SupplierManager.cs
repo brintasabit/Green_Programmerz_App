@@ -8,12 +8,12 @@ using GreenProgrammerz.Repository.Repository;
 
 namespace GreenProgrammerz.Bll.Bll
 {
-    public class CategoryManager
+    public class SupplierManager
     {
-        CategoryRepository _categoryRepository=new CategoryRepository();
-        public bool SaveInfo(Category _category)
+        SupplierRepository _supplierRepository=new SupplierRepository();
+        public bool SaveInfo(Supplier _supplier)
         {
-            return _categoryRepository.SaveInfo(_category);
+            return _supplierRepository.SaveInfo(_supplier);
         }
     }
 }
