@@ -8,6 +8,7 @@ namespace GreenProgrammerz.Model.Model
 {
     public class Category
     {
+        public  int Id { get; set; }
         private string code;
         private string name;
         public string Search { get; set; }

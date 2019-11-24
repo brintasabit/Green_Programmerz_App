@@ -1,0 +1,78 @@
+﻿@model GreenProgrammerz.Model.Model.Product
+@{
+    Layout = null;
+}
+
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Add</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h2>Product Information</h2>
+
+        <form method="post">
+            <table>
+                <tr>
+                    <td>Category:</td>
+                    <td><input type="text" name="Category" value="@Model.Category" /></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Code:</td>
+                    <td><input type="text" name="Code" value="@Model.Code" /></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Name:</td>
+                    <td><input type="text" name="Name" value="@Model.Name" /></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>ReOrderLevel:</td>
+                    <td><input type="text" name="ReOrderLevel" value="@Model.ReOrderLevel" /></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Description:</td>
+                    <td><input type="text" name="Description" value="@Model.Description" /></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    @*<td>Name:</td>*@
+                    <td><input type="submit" value="Add" /></td>
+                    <td>
+                        @if (ViewBag.Message != null)
+                        {
+                            <h2>@ViewBag.Message</h2>
+                        }
+                    </td>
+                </tr>
+            </table>
+        </form>
+
+    </div>
+</body>
+</html>
+
+
