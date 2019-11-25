@@ -13,20 +13,37 @@
 
 </head>
 <body>
-<div>
-    <form action="/category/add">
-        <button class="btn btn-success m-4">Category</button>
-    </form>
-    <form action="/product/productadd">
-        <button class="btn btn-success m-4">Product</button>
-    </form>
-    <form action="/category/add">
-        <button class="btn btn-success m-4">Customer</button>
-    </form>
-    <form action="/supplier/supplieradd">
-        <button class="btn btn-info m-4">Supplier</button>
-    </form>
-    
-</div>
+    <div>
+        <center><legend><b>Category</b></legend></center>
+        <form action="/category/add">
+            <button class="btn btn-success m-4">Category</button>
+        </form>
+        @*<form action="/product/productadd">
+            <button class="btn btn-success m-4">Product</button>
+        </form>*@
+        <center><legend><b>Product</b></legend></center>
+        <button class="btn btn-success m-4" onclick="window.location.href = '/product/productadd';">Add Product</button><br>
+        <center><legend><b>Customer</b></legend></center>
+        <button class="btn btn-success m-4" onclick="window.location.href = '/category/add';">Add Customer</button>
+        @*<form action="/category/add">
+            <button class="btn btn-success m-4">Customer</button>
+        </form>*@
+
+        <center><legend><b>Supplier</b></legend></center>
+
+        @*<form action="/supplier/supplieradd">
+            <button class="btn btn-info m-4">Supplier Add</button>
+        </form>
+        <form action="/supplier/supplierupdate">
+            <button class="btn btn-info m-4">Supplier Update</button>
+        </form>*@
+        <button class="btn btn-info m-4" onclick="window.location.href = '/supplier/supplieradd';">Add Supplier</button>
+        <button class="btn btn-info m-4" onclick="window.location.href = '/supplier/supplierupdate';">Update Supplier</button>
+
+
+
+
+
+    </div>
 </body>
 </html>

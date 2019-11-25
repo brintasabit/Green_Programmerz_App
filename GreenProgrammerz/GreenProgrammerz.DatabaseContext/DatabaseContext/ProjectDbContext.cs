@@ -10,6 +10,10 @@ namespace GreenProgrammerz.DatabaseContext.DatabaseContext
 {
     public class ProjectDbContext:DbContext
     {
+        public ProjectDbContext()
+        {
+            Configuration.LazyLoadingEnabled = false; // Disable Lazy loading
+        }
         public DbSet<Category>Categories{ get;set;}
         public DbSet<Product> Products { get; set; }
         public DbSet<Supplier> Suppliers { get; set; }

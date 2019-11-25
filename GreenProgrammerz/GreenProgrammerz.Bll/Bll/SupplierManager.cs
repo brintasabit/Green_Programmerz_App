@@ -15,5 +15,10 @@ namespace GreenProgrammerz.Bll.Bll
         {
             return _supplierRepository.SaveInfo(_supplier);
         }
+
+        public bool Update(Supplier _supplier)
+        {
+            return _supplierRepository.Update(_supplier);
+        }
     }
 }

@@ -129,6 +129,7 @@
     <Content Include="Views\Category\Add.cshtml" />
     <Content Include="Views\Supplier\SupplierAdd.cshtml" />
     <Content Include="Views\Home\SupplierAdd.cshtml" />
+    <Content Include="Views\Supplier\SupplierUpdate.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

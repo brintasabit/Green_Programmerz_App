@@ -41,6 +41,35 @@ namespace GreenProgrammerz.Controllers
             }
             return View(supplier);
         }
+        [HttpGet]
+        public ActionResult SupplierUpdate()
+        {
+            Supplier supplier=new Supplier();
+            return View(supplier);
+            //return View();
+        }
+        [HttpPost]
+        public ActionResult SupplierUpdate(Supplier supplier)
+        {
+            string message = "";
+            
+            message += "Code: " +supplier.Code;
+            message += "Name: " + supplier.Name;
+            message += "Address: " +supplier.Address;
+            message += "Email: " + supplier.Email;
+            message += "Contact: " + supplier.Contact;
+            message += "ContactPerson: " +supplier.ContactPerson;
+            //return message;
+            if (_supplierManager.Update(supplier))
+            {
+                message += "Updated!";
+            }
+            else
+            {
+                message += "Not Updated!";
+            }
+            return View(supplier);
+        }
 
     }
 }

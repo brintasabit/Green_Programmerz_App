@@ -11,7 +11,7 @@ namespace GreenProgrammerz.Model.Model
         public  int Id { get; set; }
         private string code;
         private string name;
-        public string Search { get; set; }
+       // public string Search { get; set; }
 
         public string Code
         {

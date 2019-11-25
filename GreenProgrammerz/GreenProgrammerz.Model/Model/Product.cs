@@ -14,7 +14,7 @@ namespace GreenProgrammerz.Model.Model
         public string Name { get; set; }
         public string ReOrderLevel { get; set; }
         public string Description { get; set; }
-        public string Search { get; set; }
+       // public string Search { get; set; }
 
         //public string Category
         //{
