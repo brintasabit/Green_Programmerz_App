@@ -35,5 +35,28 @@ namespace GreenProgrammerz.Controllers
             }
             return View(category);
         }
+        [HttpGet]
+
+        public ActionResult CategoryUpdate()
+        {
+            Category category = new Category();
+            return View(category);
+        }
+        [HttpPost]
+        public ActionResult CategoryUpdate(Category category)
+        {
+            string message = "";
+            message += "Code: " + category.Code;
+            message += "Name: " + category.Name;
+            if (_categoryManager.Update(category))
+            {
+                message += "Updated!";
+            }
+            else
+            {
+                message += "Not Updated!";
+            }
+            return View(category);
+        }
     }
 }

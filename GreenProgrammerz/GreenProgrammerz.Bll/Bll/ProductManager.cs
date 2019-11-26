@@ -16,5 +16,20 @@ namespace GreenProgrammerz.Bll.Bll
         {
             return _productRepository.SaveInfo(_product);
         }
+
+        public bool Update(Product _product)
+        {
+            return _productRepository.Update(_product);
+        }
+
+        public List<Product> GetAll()
+        {
+            return _productRepository.GetAll();
+        }
+
+        public Product GetBy(int id)
+        {
+            return _productRepository.GetBy(id);
+        }
     }
 }

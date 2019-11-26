@@ -15,14 +15,17 @@
 <body>
     <div>
         <center><legend><b>Category</b></legend></center>
-        <form action="/category/add">
-            <button class="btn btn-success m-4">Category</button>
-        </form>
+        @*<form action="/category/add">
+            <button class="btn btn-success m-4">Add Category</button>
+        </form>*@
+        <button class="btn btn-success m-4" onclick="window.location.href = '/category/add';">Add Category</button>
+        <button class="btn btn-success m-4" onclick="window.location.href = '/category/categoryupdate';">Update Category</button><br>
         @*<form action="/product/productadd">
             <button class="btn btn-success m-4">Product</button>
         </form>*@
         <center><legend><b>Product</b></legend></center>
-        <button class="btn btn-success m-4" onclick="window.location.href = '/product/productadd';">Add Product</button><br>
+        <button class="btn btn-success m-4" onclick="window.location.href = '/product/productadd';">Add Product</button>
+        <button class="btn btn-success m-4" onclick="window.location.href = '/product/productupdate';">Update Product</button><br>
         <center><legend><b>Customer</b></legend></center>
         <button class="btn btn-success m-4" onclick="window.location.href = '/category/add';">Add Customer</button>
         @*<form action="/category/add">
@@ -38,7 +41,10 @@
             <button class="btn btn-info m-4">Supplier Update</button>
         </form>*@
         <button class="btn btn-info m-4" onclick="window.location.href = '/supplier/supplieradd';">Add Supplier</button>
-        <button class="btn btn-info m-4" onclick="window.location.href = '/supplier/supplierupdate';">Update Supplier</button>
+        <button class="btn btn-info m-4" onclick="window.location.href = '/supplier/supplierupdate';">Update Supplier</button><br>
+        <center><legend><b>Product</b></legend></center>
+        <button class="btn btn-success m-4" onclick="window.location.href = '/purchase/purchaseadd';">Add Purchase</button>
+        <button class="btn btn-success m-4" onclick="window.location.href = '/product/productupdate';">Update Purchase</button>
 
 
 

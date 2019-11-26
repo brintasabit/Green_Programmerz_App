@@ -15,5 +15,10 @@ namespace GreenProgrammerz.Bll.Bll
         {
             return _categoryRepository.SaveInfo(_category);
         }
+
+        public bool Update(Category _category)
+        {
+            return _categoryRepository.Update(_category);
+        }
     }
 }

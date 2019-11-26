@@ -7,13 +7,13 @@ namespace GreenProgrammerz.DatabaseContext.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class dbContextChanges : IMigrationMetadata
+    public sealed partial class PurchaseModelChanged : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(dbContextChanges));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(PurchaseModelChanged));
         
         string IMigrationMetadata.Id
         {
-            get { return "201911251731226_dbContext Changes"; }
+            get { return "201911261111419_PurchaseModelChanged"; }
         }
         
         string IMigrationMetadata.Source

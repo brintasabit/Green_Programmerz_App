@@ -51,21 +51,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DatabaseContext\ProjectDbContext.cs" />
-    <Compile Include="Migrations\201911242053347_InitialCreate.cs" />
-    <Compile Include="Migrations\201911242053347_InitialCreate.Designer.cs">
-      <DependentUpon>201911242053347_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201911251401309_SearchRemoved.cs" />
-    <Compile Include="Migrations\201911251401309_SearchRemoved.Designer.cs">
-      <DependentUpon>201911251401309_SearchRemoved.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201911251520476_bob.cs" />
-    <Compile Include="Migrations\201911251520476_bob.Designer.cs">
-      <DependentUpon>201911251520476_bob.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201911251731226_dbContext Changes.cs" />
-    <Compile Include="Migrations\201911251731226_dbContext Changes.Designer.cs">
-      <DependentUpon>201911251731226_dbContext Changes.cs</DependentUpon>
+    <Compile Include="Migrations\201911261111419_PurchaseModelChanged.cs" />
+    <Compile Include="Migrations\201911261111419_PurchaseModelChanged.Designer.cs">
+      <DependentUpon>201911261111419_PurchaseModelChanged.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -81,17 +69,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201911242053347_InitialCreate.resx">
-      <DependentUpon>201911242053347_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201911251401309_SearchRemoved.resx">
-      <DependentUpon>201911251401309_SearchRemoved.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201911251520476_bob.resx">
-      <DependentUpon>201911251520476_bob.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201911251731226_dbContext Changes.resx">
-      <DependentUpon>201911251731226_dbContext Changes.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201911261111419_PurchaseModelChanged.resx">
+      <DependentUpon>201911261111419_PurchaseModelChanged.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

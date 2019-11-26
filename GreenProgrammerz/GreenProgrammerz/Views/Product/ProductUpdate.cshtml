@@ -1,0 +1,58 @@
+﻿@*@model GreenProgrammerz.Model.Model.Product*@
+@model GreenProgrammerz.Models.ProductViewModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Supplier Update</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <div>
+        <h2>Product</h2>
+        <form method="post">
+            <center>
+                <fieldset style="background-color: #FFFF00">
+                    <table>
+                        <tr>
+                            <b>Id</b>
+                            <br>
+                            <input name="id" @*value="@Model.Id"*@ />
+                            <br>
+                            <b>Category</b>
+                            <br>
+                            <input name="category" @*value="@Model.Code"*@ />
+                            <br>
+                            <b>Code</b>
+                            <br>
+                            <input name="code" @*value="@Model.Name"*@ />
+                            <br>
+                            <b>Name</b>
+                            <br>
+                            <input name="name" @*value="@Model.Address"*@ />
+                            <br>
+                            <b>ReOrderLevel</b>
+                            <br>
+                            <input name="reOrderLevel" @*value="@Model.Email"*@ />
+                            <br>
+                            <b>Description</b>
+                            <br>
+                            <input name="description" @*value="@Model.Contact"*@ />
+                            <br>
+                            <button class="btn btn-success m-3">Update</button>
+                        </tr>
+                    </table>
+                </fieldset>
+                <br />
+            </center>
+
+        </form>
+    </div>
+</body>
+</html>
+
