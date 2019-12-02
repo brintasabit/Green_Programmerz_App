@@ -7,13 +7,13 @@ namespace GreenProgrammerz.DatabaseContext.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class PurchaseModelChanged : IMigrationMetadata
+    public sealed partial class c : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(PurchaseModelChanged));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(c));
         
         string IMigrationMetadata.Id
         {
-            get { return "201911261111419_PurchaseModelChanged"; }
+            get { return "201912021508540_c"; }
         }
         
         string IMigrationMetadata.Source

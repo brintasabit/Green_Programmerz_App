@@ -8,23 +8,15 @@ namespace GreenProgrammerz.Model.Model
 {
     public class Purchase
     {
+        public Purchase()
+        {
+            PurchaseDetailses=new List<PurchaseDetails>();
+        }
         public int Id { get; set; }
         public string Date { get; set; }
-        public string BillInvoice { get; set; }
+        public string BillInvoiceNo { get; set; }
         public string SupplierName { get; set; }
-        public string Category { get; set; }
-        public string Products { get; set; }
-        public string Code { get; set; }
-        public double AvailableQuantity { get; set; }
-        public string ManufacturedDate { get; set; }
-        public string ExpireDate { get; set; }
-        public string Remarks { get; set; }
-        public double Quantity { get; set; }
-        public double UnitPrice { get; set; }
-        public double TotalPrice { get; set; }
-        public double PreviousUnitPrice { get; set; }
-        public double PreviousMRP { get; set; }
-        public double MRP { get; set; }
-       // public double Profit { get; set; }
+
+        public List<PurchaseDetails>PurchaseDetailses { get; set; }
     }
 }

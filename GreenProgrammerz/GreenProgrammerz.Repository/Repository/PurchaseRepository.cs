@@ -11,10 +11,10 @@ namespace GreenProgrammerz.Repository.Repository
     public class PurchaseRepository
     {
         ProjectDbContext dbContext = new ProjectDbContext();
-        public bool SaveInfo(Purchase _purchase)
+        public bool SaveInfo(PurchaseDetails _purchaseDetails)
         {
 
-                dbContext.Purchases.Add(_purchase);
+                dbContext.PurchaseDetailses.Add(_purchaseDetails);
 
                 return dbContext.SaveChanges() > 0;
             

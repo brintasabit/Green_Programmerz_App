@@ -11,9 +11,9 @@ namespace GreenProgrammerz.Bll.Bll
     public class PurchaseManager
     {
         PurchaseRepository _purchaseRepository=new PurchaseRepository();
-        public bool SaveInfo(Purchase _purchase)
+        public bool SaveInfo(PurchaseDetails _purchaseDetails)
         {
-            return _purchaseRepository.SaveInfo(_purchase);
+            return _purchaseRepository.SaveInfo(_purchaseDetails);
         }
     }
 }

@@ -51,9 +51,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DatabaseContext\ProjectDbContext.cs" />
-    <Compile Include="Migrations\201911261111419_PurchaseModelChanged.cs" />
-    <Compile Include="Migrations\201911261111419_PurchaseModelChanged.Designer.cs">
-      <DependentUpon>201911261111419_PurchaseModelChanged.cs</DependentUpon>
+    <Compile Include="Migrations\201912021508540_c.cs" />
+    <Compile Include="Migrations\201912021508540_c.Designer.cs">
+      <DependentUpon>201912021508540_c.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -69,8 +69,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201911261111419_PurchaseModelChanged.resx">
-      <DependentUpon>201911261111419_PurchaseModelChanged.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201912021508540_c.resx">
+      <DependentUpon>201912021508540_c.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

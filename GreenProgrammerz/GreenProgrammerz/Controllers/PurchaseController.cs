@@ -15,34 +15,34 @@ namespace GreenProgrammerz.Controllers
         [HttpGet]
         public ActionResult PurchaseAdd()
         {
-            Purchase purchase = new Purchase();
+            PurchaseDetails purchase = new PurchaseDetails();
             return View(purchase);
             //return View();
         }
         [HttpPost]
-        public ActionResult PurchaseAdd(Purchase purchase)
+        public ActionResult PurchaseAdd(PurchaseDetails purchaseDetails)
         {
             string message = "";
 
-            message += "Date: " + purchase.Date;
-            message += "BillInvoice: " + purchase.BillInvoice;
-            message += "SupplierName: " + purchase.SupplierName;
-            message += "Category: " + purchase.Category;
-            message += "Products: " + purchase.Products;
+            message += "Date: " + purchaseDetails.Date;
+            message += "BillInvoice: " + purchaseDetails.BillInvoice;
+            message += "SupplierName: " + purchaseDetails.SupplierName;
+            message += "Category: " + purchaseDetails.Category;
+            message += "Products: " + purchaseDetails.Products;
             
-            message += "Code: " + purchase.Code;
-            message += "AvailableQuantity: " + purchase.AvailableQuantity;
-            message += "ManufacturedDate: " + purchase.ManufacturedDate;
-            message += "ExpireDate: " + purchase.ExpireDate;
-            message += "Remarks: " + purchase.Remarks;
-            message += "Quantity: " + purchase.Quantity;
-            message += "UnitPrice: " + purchase.UnitPrice;
-            message += "TotalPrice: " + purchase.TotalPrice;
-            message += "PreviousUnitPrice: " + purchase.PreviousUnitPrice;
-            message += "PreviousMrp: " + purchase.PreviousMRP;
-            message += "MRP: " + purchase.MRP;
+            message += "Code: " + purchaseDetails.Code;
+            message += "AvailableQuantity: " + purchaseDetails.AvailableQuantity;
+            message += "ManufacturedDate: " + purchaseDetails.ManufacturedDate;
+            message += "ExpireDate: " + purchaseDetails.ExpireDate;
+            message += "Remarks: " + purchaseDetails.Remarks;
+            message += "Quantity: " + purchaseDetails.Quantity;
+            message += "UnitPrice: " + purchaseDetails.UnitPrice;
+            message += "TotalPrice: " + purchaseDetails.TotalPrice;
+            message += "PreviousUnitPrice: " + purchaseDetails.PreviousUnitPrice;
+            message += "PreviousMrp: " + purchaseDetails.PreviousMRP;
+            message += "MRP: " + purchaseDetails.MRP;
             //return message;
-            if (_purchaseManager.SaveInfo(purchase))
+            if (_purchaseManager.SaveInfo(purchaseDetails))
             {
                 message += "Saved!";
             }
@@ -50,7 +50,7 @@ namespace GreenProgrammerz.Controllers
             {
                 message += "Not Saved!";
             }
-            return View(purchase);
+            return View(purchaseDetails);
         }
     }
 }

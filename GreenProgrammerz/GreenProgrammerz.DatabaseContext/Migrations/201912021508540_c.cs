@@ -3,7 +3,7 @@ namespace GreenProgrammerz.DatabaseContext.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class PurchaseModelChanged : DbMigration
+    public partial class c : DbMigration
     {
         public override void Up()
         {
@@ -34,7 +34,7 @@ namespace GreenProgrammerz.DatabaseContext.Migrations
                 .Index(t => t.Product_Id);
             
             CreateTable(
-                "dbo.Purchases",
+                "dbo.PurchaseDetails",
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
@@ -54,6 +54,20 @@ namespace GreenProgrammerz.DatabaseContext.Migrations
                         PreviousUnitPrice = c.Double(nullable: false),
                         PreviousMRP = c.Double(nullable: false),
                         MRP = c.Double(nullable: false),
+                        Purchase_Id = c.Int(),
+                    })
+                .PrimaryKey(t => t.Id)
+                .ForeignKey("dbo.Purchases", t => t.Purchase_Id)
+                .Index(t => t.Purchase_Id);
+            
+            CreateTable(
+                "dbo.Purchases",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        Date = c.String(),
+                        BillInvoiceNo = c.String(),
+                        SupplierName = c.String(),
                     })
                 .PrimaryKey(t => t.Id);
             
@@ -75,10 +89,13 @@ namespace GreenProgrammerz.DatabaseContext.Migrations
         
         public override void Down()
         {
+            DropForeignKey("dbo.PurchaseDetails", "Purchase_Id", "dbo.Purchases");
             DropForeignKey("dbo.Products", "Product_Id", "dbo.Products");
+            DropIndex("dbo.PurchaseDetails", new[] { "Purchase_Id" });
             DropIndex("dbo.Products", new[] { "Product_Id" });
             DropTable("dbo.Suppliers");
             DropTable("dbo.Purchases");
+            DropTable("dbo.PurchaseDetails");
             DropTable("dbo.Products");
             DropTable("dbo.Categories");
         }

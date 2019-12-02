@@ -18,5 +18,6 @@ namespace GreenProgrammerz.DatabaseContext.DatabaseContext
         public DbSet<Product> Products { get; set; }
         public DbSet<Supplier> Suppliers { get; set; }
         public DbSet<Purchase> Purchases { get; set; }
+        public DbSet<PurchaseDetails> PurchaseDetailses { get; set; }
     }
 }

@@ -1,4 +1,4 @@
-﻿@model GreenProgrammerz.Model.Model.Purchase
+﻿@model GreenProgrammerz.Model.Model.PurchaseDetails
 @{
     Layout = null;
 }
@@ -16,90 +16,203 @@
 
 </head>
 <body>
-    <div>
-        <h2>Purchase</h2>
-        <form method="post">
-            <center>
-                <fieldset style="background-color: 	#ADD8E6">
-                    <table>
-                        <tr>
-                            @*<b>Id</b>
-                            <br>
-                            <input name="id"/>
-                            <br>*@
-                            <b>Date</b>
-                            <br>
-                            <input type="date" name="bday"/>
-                            <br>
-                            <b>Bill/Invoice</b>
-                            <br>
-                            <input name="billInvoice"/>
-                            <br>
-                            <b>Supplier Name</b>
-                            <br>
-                            <input name="supplierName"/>
-                            <br>
-                            <b>Category</b>
-                            <br>
-                            <input name="category"/>
-                            <br>
-                            <b>Products</b>
-                            <br>
-                            <input name="products"/>
-                            <br>
-                            <b>Code</b>
-                            <br>
-                            <input name="code"/>
-                            <br>
-                            <b>Available Quantity</b>
-                            <br>
-                            <input name="availableQuantity"/>
-                            <br>
-                            <b>Manufactured Date</b>
-                            <br>
-                            <input name="manufacturedDate"/>
-                            <br>
-                            <b>Expire Date</b>
-                            <br>
-                            <input name="expireDate"/>
-                            <br>
-                            <b>Remarks</b>
-                            <br>
-                            <input name="remarks"/>
-                            <br>
-                            <b>Quantity</b>
-                            <br>
-                            <input name="quantity"/>
-                            <br>
-                            <b>Unit Price</b>
-                            <br>
-                            <input name="unitPrice"/>
-                            <br>
-                            <b>Total Price</b>
-                            <br>
-                            <input name="totalPrice"/>
-                            <br>
-                            <b>Previous Unit Price</b>
-                            <br>
-                            <input name="previousUnitPrice"/>
-                            <br>
-                            <b>Previous MRP</b>
-                            <br>
-                            <input name="previousMRP"/>
-                            <br>
-                            <b>MRP</b>
-                            <br>
-                            <input name="mRP"/>
-                            <br>
-                            <button class="btn btn-primary m-3">Save</button>
-                        </tr>
-                    </table>
-                </fieldset>
-                <br />
-            </center>
+<div>
+    <h2>Purchase</h2>
+    <form method="post">
+        <center>
+            <fieldset style="background-color: 	#ADD8E6">
+                <table>
+                    <tr>
+                        <b>Date</b>
+                        <br>
+                        <input type="date" name="date"/>
+                        <br>
+                        <b>Bill/Invoice</b>
+                        <br>
+                        <input name="billInvoice"/>
+                        <br>
+                        <b>Supplier Name</b>
+                        <br>
+                        <input name="supplierName"/>
+                        <br>
+                        <b>Category</b>
+                        <br>
+                        <input name="category"/>
+                        <br>
+                        <b>Products</b>
+                        <br>
+                        <input name="products"/>
+                        <br>
+                        <b>Code</b>
+                        <br>
+                        <input name="code"/>
+                        <br>
+                        <b>Available Quantity</b>
+                        <br>
+                        <input name="availableQuantity"/>
+                        <br>
+                        <b>Manufactured Date</b>
+                        <br>
+                        <input type="date" name="manufacturedDate"/>
+                        <br>
+                        <b>Expire Date</b>
+                        <br>
+                        <input type="date" name="expireDate"/>
+                        <br>
+                        <b>Remarks</b>
+                        <br>
+                        <input name="remarks"/>
+                        <br>
+                        <b>Quantity</b>
+                        <br>
+                        <input name="quantity"/>
+                        <br>
+                        <b>Unit Price</b>
+                        <br>
+                        <input name="unitPrice"/>
+                        <br>
+                        <b>Total Price</b>
+                        <br>
+                        <input name="totalPrice"/>
+                        <br>
+                        <b>Previous Unit Price</b>
+                        <br>
+                        <input name="previousUnitPrice"/>
+                        <br>
+                        <b>Previous MRP</b>
+                        <br>
+                        <input name="previousMRP"/>
+                        <br>
+                        <b>MRP</b>
+                        <br>
+                        <input name="mRP"/>
+                        <br>
+                        <button class="btn btn-primary m-3">Save</button>
+                    </tr>
+                </table>
+            </fieldset>
+            <br />
+        </center>
+        <table>
+            <tr>
+                <td>Sl</td>
+                <td>Date</td>
+                <td>BillInvoice</td>
+                <td>SupplierName</td>
+                <td>Category</td>
+                <td>Products</td>
+                <td>Code</td>
+                <td>Available Quantity</td>
+                <td>Manufactured Date</td>
+                <td>Expire Date</td>
+                <td>Remarks</td>
+                <td>Quantity</td>
+                <td>Unit Price</td>
+                <td>Total Price</td>
+                <td>Previous Unit Price</td>
+                <td>Previous MRP</td>
+                <td>MRP</td>
+            </tr>
+            <tbody id="PurchaseInformation">
+            </tbody>
+        </table>
+        <table>
+            <tr>
+                <td><input type="submit" value="Save" /></td>
+            </tr>
+        </table>
+    </form>
+</div>
+<script src="~/Scripts/jquery-1.8.0.min.js"></script>
+<script>
 
-        </form>
-    </div>
+    $(document).ready(function () {
+        var index = 0;
+
+        $('#Save').click(function () {
+            var result = GetResultData();
+
+            var resultRow = GerResultRow(result);
+
+            $("#PurchaseInformation").append(resultRow);
+            index++;
+        });
+
+        function GetResultData() {
+            var date = $('#Date').val();
+            var billInvoice = $('#BillInvoice').val();
+            var supplierName = $('#SupplierName').val();
+            var category = $('#Category').val();
+            var products = $('#Products').val();
+            var code = $('#Code').val();
+            var availableQuantity = $('#AvailableQuantity').val();
+            var manufacturedDate = $('#ManufacturedDate').val();
+            var expireDate = $('#ExpireDate').val();
+            var remarks = $('#Remarks').val();
+            var quantity = $('#Quantity').val();
+            var unitPrice = $('#UnitPrice').val();
+            var totalPrice = $('#TotalPrice').val();
+            var previousUnitPrice = $('#PreviousUnitPrice').val();
+            var previousMrp = $('#PreviousMRP').val();
+            var mrp = $('#MRP').val();
+
+            return {
+                Date: date,BillInvoice: billInvoice,SupplierName: supplierName,Category: category, Products: products, Code: code, AvailableQuantity: availableQuantity,
+                ManufacturedDate: manufacturedDate, ExpireDate: expireDate, Remarks: remarks, Quantity: quantity,
+                UnitPrice: unitPrice, TotalPrice: totalPrice, PreviousUnitPrice: previousUnitPrice,
+                PreviousMRP: previousMrp, MRP: mrp
+            }
+        }
+
+        var sl = index;
+        function GerResultRow(result) {
+            var dateHidden = "<input type='hidden' name='PurchaseDetailses[" + index + "].Date' value='" + result.Date + "'></div>";
+            var billInvoiceHidden = "<input type='hidden' name='PurchaseDetailses[" + index + "].BillInvoice' value='" + result.BillInvoice + "'></div>";
+            var supplierNameHidden = "<input type='hidden' name='PurchaseDetailses[" + index + "].SupplierName' value='" + result.SupplierName + "'></div>";
+
+            var categoryHidden = "<input type='hidden' name='PurchaseDetailses[" + index + "].Category' value='" + result.Category + "'></div>";
+            var productsHidden = "<input type='hidden' name='PurchaseDetailses[" + index + "].Marks' value='" + result.Products + "'></div>";
+            var codeHidden = "<input type='hidden' name='PurchaseDetailses[" + index + "].Marks' value='" + result.Code + "'></div>";
+            var availableQuantityHidden = "<input type='hidden' name='PurchaseDetailses[" + index + "].Marks' value='" + result.AvailableQuantity + "'></div>";
+            var manufacturedDateHidden = "<input type='hidden' name='PurchaseDetailses[" + index + "].Marks' value='" + result.ManufacturedDate + "'></div>";
+            var expireDateHidden = "<input type='hidden' name='PurchaseDetailses[" + index + "].Marks' value='" + result.ExpireDate + "'></div>";
+            var remarksHidden = "<input type='hidden' name='PurchaseDetailses[" + index + "].Marks' value='" + result.Remarks + "'></div>";
+            var quantityHidden = "<input type='hidden' name='PurchaseDetailses[" + index + "].Marks' value='" + result.Quantity + "'></div>";
+            var unitPriceHidden = "<input type='hidden' name='PurchaseDetailses[" + index + "].Marks' value='" + result.UnitPrice + "'></div>";
+            var totalPriceHidden = "<input type='hidden' name='PurchaseDetailses[" + index + "].Marks' value='" + result.TotalPrice + "'></div>";
+            var previousUnitPriceHidden = "<input type='hidden' name='PurchaseDetailses[" + index + "].Marks' value='" + result.PreviousUnitPrice + "'></div>";
+            var previousMRPHidden = "<input type='hidden' name='PurchaseDetailses[" + index + "].Marks' value='" + result.PreviousMRP + "'></div>";
+            var mRPHidden = "<input type='hidden' name='PurchaseDetailses[" + index + "].Marks' value='" + result.MRP + "'></div>";
+
+            var startTr = "<tr>";
+            var slCell = "<td class='text-success'>" + (++sl) + "</td>";
+            var dateCell = "<td class='text-success'>" + dateHidden + result.Date + "</td>";
+            var billInvoiceCell = "<td class='text-success'>" + billInvoiceHidden + result.BillInvoice + "</td>";
+            var supplierNameCell = "<td class='text-success'>" + supplierNameHidden + result.SupplierName + "</td>";
+
+            var categoryCell = "<td class='text-success'>" + categoryHidden + result.Category + "</td>";
+            var productsCell = "<td class='text-success'>" + productsHidden + result.Products + "</td>";
+            var codeCell = "<td class='text-success'>" + codeHidden + result.Code + "</td>";
+            var availableQuantityCell = "<td class='text-success'>" + availableQuantityHidden + result.AvailableQuantity + "</td>";
+            var manufacturedDateCell = "<td class='text-success'>" + manufacturedDateHidden + result.ManufacturedDate + "</td>";
+            var expireDateCell = "<td class='text-success'>" + expireDateHidden + result.ExpireDate + "</td>";
+            var remarksCell = "<td class='text-success'>" + remarksHidden + result.Remarks + "</td>";
+            var quantityCell = "<td class='text-success'>" + quantityHidden + result.Quantity + "</td>";
+            var unitPriceCell = "<td class='text-success'>" + unitPriceHidden + result.UnitPrice + "</td>";
+            var previousUnitPriceCell = "<td class='text-success'>" + previousUnitPriceHidden + result.PreviousUnitPrice + "</td>";
+            var previousMRPCell = "<td class='text-success'>" + previousMRPHidden + result.PreviousMRP + "</td>";
+            var mrpCell = "<td class='text-success'>" + mRPHidden + result.MRP + "</td>";
+
+            var endTr = "</tr>";
+
+            return (startTr + slCell +dateCell+billInvoiceCell+supplierNameCell+ categoryCell + productsCell+codeCell+availableQuantityCell+
+                manufacturedDateCell+expireDateCell+remarksCell+quantityCell+unitPriceCell+previousUnitPriceCell+
+                previousMRPCell+mrpCell+ endTr);
+
+        }
+
+    });
+</script>
 </body>
 </html>
 
