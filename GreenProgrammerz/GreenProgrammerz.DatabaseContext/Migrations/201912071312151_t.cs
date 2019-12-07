@@ -3,7 +3,7 @@ namespace GreenProgrammerz.DatabaseContext.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class c : DbMigration
+    public partial class t : DbMigration
     {
         public override void Up()
         {
@@ -66,7 +66,7 @@ namespace GreenProgrammerz.DatabaseContext.Migrations
                     {
                         Id = c.Int(nullable: false, identity: true),
                         Date = c.String(),
-                        BillInvoiceNo = c.String(),
+                        BillInvoice = c.String(),
                         SupplierName = c.String(),
                     })
                 .PrimaryKey(t => t.Id);

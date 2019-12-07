@@ -1,4 +1,4 @@
-﻿@model GreenProgrammerz.Model.Model.PurchaseDetails
+﻿@*@model GreenProgrammerz.Model.Model.PurchaseDetails*@
 @{
     Layout = null;
 }
@@ -10,126 +10,131 @@
     <meta name="viewport" content="width=device-width" />
     <title>Add Purchase</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    @*<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>*@
 
 </head>
 <body>
-<div>
-    <h2>Purchase</h2>
-    <form method="post">
-        <center>
+    <div>
+        <h2>Purchase</h2>
+        <form method="post">
+
             <fieldset style="background-color: 	#ADD8E6">
                 <table>
+
                     <tr>
                         <b>Date</b>
                         <br>
-                        <input type="date" name="date"/>
+                        <input type="date" name="date" @*id="Date"*@ />
                         <br>
                         <b>Bill/Invoice</b>
                         <br>
-                        <input name="billInvoice"/>
+                        <input name="billInvoice" @*id="BillInvoice"*@ />
                         <br>
                         <b>Supplier Name</b>
                         <br>
-                        <input name="supplierName"/>
+                        <input name="supplierName" @*id="SupplierName"*@ />
                         <br>
                         <b>Category</b>
                         <br>
-                        <input name="category"/>
+                        <input name="category" id="Category" />
                         <br>
                         <b>Products</b>
                         <br>
-                        <input name="products"/>
+                        <input name="products" id="Products" />
                         <br>
                         <b>Code</b>
                         <br>
-                        <input name="code"/>
+                        <input name="code" id="Code" />
                         <br>
                         <b>Available Quantity</b>
                         <br>
-                        <input name="availableQuantity"/>
+                        <input name="availableQuantity" id="AvailableQuantity" />
                         <br>
                         <b>Manufactured Date</b>
                         <br>
-                        <input type="date" name="manufacturedDate"/>
+                        <input type="date" name="manufacturedDate" id="ManufacturedDate" />
                         <br>
                         <b>Expire Date</b>
                         <br>
-                        <input type="date" name="expireDate"/>
+                        <input type="date" name="expireDate" id="ExpireDate" />
                         <br>
                         <b>Remarks</b>
                         <br>
-                        <input name="remarks"/>
-                        <br>
-                        <b>Quantity</b>
-                        <br>
-                        <input name="quantity"/>
-                        <br>
-                        <b>Unit Price</b>
-                        <br>
-                        <input name="unitPrice"/>
-                        <br>
-                        <b>Total Price</b>
-                        <br>
-                        <input name="totalPrice"/>
-                        <br>
-                        <b>Previous Unit Price</b>
-                        <br>
-                        <input name="previousUnitPrice"/>
-                        <br>
-                        <b>Previous MRP</b>
-                        <br>
-                        <input name="previousMRP"/>
-                        <br>
-                        <b>MRP</b>
-                        <br>
-                        <input name="mRP"/>
-                        <br>
-                        <button class="btn btn-primary m-3">Save</button>
+                        <td>
+                            <input name="remarks" id="Remarks" />
+                            <br>
+                            <b>Quantity</b>
+                            <br>
+                            <input name="quantity" id="Quantity" />
+                            <br>
+                            <b>Unit Price</b>
+                            <br>
+                            <input name="unitPrice" id="UnitPrice" />
+                            <br>
+                            <b>Total Price</b>
+                            <br>
+                            <input name="totalPrice" id="TotalPrice" />
+                            <br>
+                            <b>Previous Unit Price</b>
+                            <br>
+                            <input name="previousUnitPrice" id="PreviousUnitPrice" />
+                            <br>
+                            <b>Previous MRP</b>
+                            <br>
+                            <input name="previousMRP" id="PreviousMRP" />
+                            <br>
+                            <b>MRP</b>
+                            <br>
+                            <input name="mrp" id="MRP" />
+                            <br>
+                            <button class="btn btn-primary m-3" id="save">Save</button>
                     </tr>
+
                 </table>
             </fieldset>
             <br />
-        </center>
+
+            <table>
+
+                <tr>
+                    <td>Sl</td>
+                    @*<td>Date</td>
+                    <td>BillInvoice</td>
+                    <td>SupplierName</td>*@
+                    <td>Category</td>
+                    <td>Products</td>
+                    <td>Code</td>
+                    <td>AvailableQuantity</td>
+                    <td>ManufacturedDate</td>
+                    <td>ExpireDate</td>
+                    <td>Remarks</td>
+                    <td>Quantity</td>
+                    <td>UnitPrice</td>
+                    <td>TotalPrice</td>
+                    <td>PreviousUnitPrice</td>
+                    <td>PreviousMRP</td>
+                    <td>MRP</td>
+                </tr>
+
+                <tbody id="PurchaseInformation"></tbody>
+            </table>
+        
         <table>
             <tr>
-                <td>Sl</td>
-                <td>Date</td>
-                <td>BillInvoice</td>
-                <td>SupplierName</td>
-                <td>Category</td>
-                <td>Products</td>
-                <td>Code</td>
-                <td>Available Quantity</td>
-                <td>Manufactured Date</td>
-                <td>Expire Date</td>
-                <td>Remarks</td>
-                <td>Quantity</td>
-                <td>Unit Price</td>
-                <td>Total Price</td>
-                <td>Previous Unit Price</td>
-                <td>Previous MRP</td>
-                <td>MRP</td>
-            </tr>
-            <tbody id="PurchaseInformation">
-            </tbody>
-        </table>
-        <table>
-            <tr>
-                <td><input type="submit" value="Save" /></td>
+                <td><input type="submit" id="submit" value="Submit" /></td>
             </tr>
         </table>
-    </form>
-</div>
+        </form>
+    </div>
 <script src="~/Scripts/jquery-1.8.0.min.js"></script>
 <script>
 
     $(document).ready(function () {
         var index = 0;
 
-        $('#Save').click(function () {
+        $('#save').click(function () {
             var result = GetResultData();
 
             var resultRow = GerResultRow(result);
@@ -139,9 +144,9 @@
         });
 
         function GetResultData() {
-            var date = $('#Date').val();
-            var billInvoice = $('#BillInvoice').val();
-            var supplierName = $('#SupplierName').val();
+            //var date = $('#Date').val();
+            //var billInvoice = $('#BillInvoice').val();
+            //var supplierName = $('#SupplierName').val();
             var category = $('#Category').val();
             var products = $('#Products').val();
             var code = $('#Code').val();
@@ -157,18 +162,19 @@
             var mrp = $('#MRP').val();
 
             return {
-                Date: date,BillInvoice: billInvoice,SupplierName: supplierName,Category: category, Products: products, Code: code, AvailableQuantity: availableQuantity,
+                /*Date: date,BillInvoice: billInvoice,SupplierName: supplierName,*/Category: category, Products:
+                    products, Code: code, AvailableQuantity: availableQuantity,
                 ManufacturedDate: manufacturedDate, ExpireDate: expireDate, Remarks: remarks, Quantity: quantity,
                 UnitPrice: unitPrice, TotalPrice: totalPrice, PreviousUnitPrice: previousUnitPrice,
                 PreviousMRP: previousMrp, MRP: mrp
-            }
+        }
         }
 
         var sl = index;
         function GerResultRow(result) {
-            var dateHidden = "<input type='hidden' name='PurchaseDetailses[" + index + "].Date' value='" + result.Date + "'></div>";
-            var billInvoiceHidden = "<input type='hidden' name='PurchaseDetailses[" + index + "].BillInvoice' value='" + result.BillInvoice + "'></div>";
-            var supplierNameHidden = "<input type='hidden' name='PurchaseDetailses[" + index + "].SupplierName' value='" + result.SupplierName + "'></div>";
+            //var dateHidden = "<input type='hidden' name='PurchaseDetailses[" + index + "].Date' value='" + result.Date + "'></div>";
+            //var billInvoiceHidden = "<input type='hidden' name='PurchaseDetailses[" + index + "].BillInvoice' value='" + result.BillInvoice + "'></div>";
+            //var supplierNameHidden = "<input type='hidden' name='PurchaseDetailses[" + index + "].SupplierName' value='" + result.SupplierName + "'></div>";
 
             var categoryHidden = "<input type='hidden' name='PurchaseDetailses[" + index + "].Category' value='" + result.Category + "'></div>";
             var productsHidden = "<input type='hidden' name='PurchaseDetailses[" + index + "].Marks' value='" + result.Products + "'></div>";
@@ -186,9 +192,9 @@
 
             var startTr = "<tr>";
             var slCell = "<td class='text-success'>" + (++sl) + "</td>";
-            var dateCell = "<td class='text-success'>" + dateHidden + result.Date + "</td>";
-            var billInvoiceCell = "<td class='text-success'>" + billInvoiceHidden + result.BillInvoice + "</td>";
-            var supplierNameCell = "<td class='text-success'>" + supplierNameHidden + result.SupplierName + "</td>";
+            //var dateCell = "<td class='text-success'>" + dateHidden + result.Date + "</td>";
+            //var billInvoiceCell = "<td class='text-success'>" + billInvoiceHidden + result.BillInvoice + "</td>";
+            //var supplierNameCell = "<td class='text-success'>" + supplierNameHidden + result.SupplierName + "</td>";
 
             var categoryCell = "<td class='text-success'>" + categoryHidden + result.Category + "</td>";
             var productsCell = "<td class='text-success'>" + productsHidden + result.Products + "</td>";
@@ -199,14 +205,16 @@
             var remarksCell = "<td class='text-success'>" + remarksHidden + result.Remarks + "</td>";
             var quantityCell = "<td class='text-success'>" + quantityHidden + result.Quantity + "</td>";
             var unitPriceCell = "<td class='text-success'>" + unitPriceHidden + result.UnitPrice + "</td>";
+            var totalPriceCell = "<td class='text-success'>" +totalPriceHidden + result.TotalPrice + "</td>";
+
             var previousUnitPriceCell = "<td class='text-success'>" + previousUnitPriceHidden + result.PreviousUnitPrice + "</td>";
             var previousMRPCell = "<td class='text-success'>" + previousMRPHidden + result.PreviousMRP + "</td>";
             var mrpCell = "<td class='text-success'>" + mRPHidden + result.MRP + "</td>";
 
             var endTr = "</tr>";
 
-            return (startTr + slCell +dateCell+billInvoiceCell+supplierNameCell+ categoryCell + productsCell+codeCell+availableQuantityCell+
-                manufacturedDateCell+expireDateCell+remarksCell+quantityCell+unitPriceCell+previousUnitPriceCell+
+            return (startTr + slCell +/*dateCell+billInvoiceCell+supplierNameCell+ */categoryCell + productsCell+codeCell+availableQuantityCell+
+                manufacturedDateCell+expireDateCell+remarksCell+quantityCell+unitPriceCell+totalPriceCell+previousUnitPriceCell+
                 previousMRPCell+mrpCell+ endTr);
 
         }

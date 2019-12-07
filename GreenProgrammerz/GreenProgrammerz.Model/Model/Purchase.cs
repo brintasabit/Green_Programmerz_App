@@ -10,13 +10,13 @@ namespace GreenProgrammerz.Model.Model
     {
         public Purchase()
         {
-            PurchaseDetailses=new List<PurchaseDetails>();
+            PurchaseDetailsess=new List<PurchaseDetails>();
         }
         public int Id { get; set; }
         public string Date { get; set; }
-        public string BillInvoiceNo { get; set; }
+        public string BillInvoice { get; set; }
         public string SupplierName { get; set; }
 
-        public List<PurchaseDetails>PurchaseDetailses { get; set; }
+        public List<PurchaseDetails>PurchaseDetailsess { get; set; }
     }
 }
