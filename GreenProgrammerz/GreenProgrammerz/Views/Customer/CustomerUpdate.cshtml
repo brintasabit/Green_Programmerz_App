@@ -1,0 +1,61 @@
+﻿@model GreenProgrammerz.Model.Model.Customer
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Customer Update</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <div>
+        <h2>Customer</h2>
+        <form method="post">
+            <center>
+                <fieldset style="background-color: #03FF11">
+                    <table>
+                        <tr>
+                            <b>Id</b>
+                            <br>
+                            <input name="id" @*value="@Model.Id"*@ />
+                            <br>
+                            <b>Code</b>
+                            <br>
+                            <input name="code" @*value="@Model.Code"*@ />
+                            <br>
+                            <b>Name</b>
+                            <br>
+                            <input name="name" @*value="@Model.Name"*@ />
+                            <br>
+                            <b>Address</b>
+                            <br>
+                            <input name="address" @*value="@Model.Address"*@ />
+                            <br>
+                            <b>Email</b>
+                            <br>
+                            <input name="email" @*value="@Model.Email"*@ />
+                            <br>
+                            <b>Contact</b>
+                            <br>
+                            <input name="contact" @*value="@Model.Contact"*@ />
+                            <br>
+                            <b>Loyalty Point</b>
+                            <br>
+                            <input name="LoyaltyPoint" @*value="@Model.LoyaltyPoint"*@ />
+                            <br>
+                            <button class="btn btn-primary m-3">Update</button>
+                        </tr>
+                    </table>
+                </fieldset>
+                <br />
+            </center>
+
+        </form>
+    </div>
+</body>
+</html>
+
